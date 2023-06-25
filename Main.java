@@ -93,17 +93,8 @@ public class Main
     public void increaseHour(int hours)
     {
         hour += hours;
-        if (player.energy <= 0)
-        {
-            System.out.println("You ran out of energy!");
-            System.out.println("You collapsed on the floor and someone robbed you.");
-            System.out.println("*****");
-            hour = 0;
-            day ++;
-            player.money = (int)((double)(player.money / 10) * 5 * Math.random());
-            increaseDay();
-        }
-        else if (hour >= 24)
+        checkEnergy();
+        if (hour >= 24)
         {
             hour -= 24;
             day ++;
@@ -113,9 +104,18 @@ public class Main
 
     public void increaseDay()
     {
-        day++;
-        System.out.println("You are now on Day " + day + ".");
-        System.out.println("*****");
+        checkEnergy();
+        checkMoney();
+        if (game)
+        {
+            day++;
+            System.out.println("You are now on Day " + day + ".");
+            System.out.println("*****");
+        }
+    }
+
+    public void checkEnergy()
+    {
         if (player.energy <= 0)
         {
             System.out.println("You ran out of energy!");
@@ -123,6 +123,10 @@ public class Main
             System.out.println("*****");
             player.money = (int)((double)(player.money / 10) * 5 * Math.random());
         }
+    }
+
+    public void checkMoney()
+    {
         if (player.money <= 0)
         {
             gameOver();
