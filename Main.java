@@ -28,6 +28,7 @@ public class Main
         // User interface
         System.out.println("Type the word in the parentheses in order to access the respective section.");
         System.out.println("Check Stats || (stat)");
+        System.out.println("Coin Flip || (coin)");
         System.out.println("*****");
         String decision = in.nextLine();
 
@@ -35,6 +36,11 @@ public class Main
         if (decision.equals("stat"))
         {
             print();
+        }
+        if (decision.equals("coin"))
+        {
+            CoinFlip game = new CoinFlip();
+            game.main();
         }
         if (decision.equals("dev"))
         {
