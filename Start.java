@@ -4,7 +4,7 @@
  */
 public class Start
 {
-    public static void start()
+    public static void main(String args [])
     {
         Main m = new Main();
     }
