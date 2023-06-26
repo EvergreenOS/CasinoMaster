@@ -4,8 +4,10 @@
  */
 public class Start
 {
+    public static Main m;
     public static void main(String args [])
     {
-        Main m = new Main();
+        m = new Main();
+        m.start();
     }
 }
