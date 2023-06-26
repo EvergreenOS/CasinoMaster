@@ -12,6 +12,11 @@ public class Main
 
     public Main()
     {
+        
+    }
+    
+    public void start()
+    {
         day = 1;
         hour = 0;
         game = true;
@@ -40,7 +45,7 @@ public class Main
         if (decision.equals("coin"))
         {
             CoinFlip game = new CoinFlip();
-            game.main();
+            game.main(player);
         }
         if (decision.equals("dev"))
         {
