@@ -1,29 +1,26 @@
 /**
- * Sets up player through a constructor
+ * Keeps track of player stats and information.
  *
- * @author Evergreen
- * @version 6-25-2023
+ * @author (Evergreen)
+ * @version (8/6/2023)
  */
 public class Player
 {
-    String name;
-    public static int money = 1000;
-    public static int energy = 50;
-    
-    public Player()
-    {
-        name = "Player";
-    }
+    public static String name;
+    public static int money;
+    public static int energy;
     
     public Player(String name)
     {
         this.name = name;
+        money = 100;
+        energy = 50;
     }
     
-    public void print()
+    public Player()
     {
-        System.out.println("Name: " + name);
-        System.out.println("Money: " + money + "$");
-        System.out.println("Energy: " + energy);
+        this.name = "Player";
+        money = 100;
+        energy = 50;
     }
 }
