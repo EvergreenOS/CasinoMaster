@@ -1,13 +1,14 @@
 
 /**
- * Starts the project.
+ * Write a description of class Start here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
  */
 public class Start
 {
-    public static Main m;
-    public static void main(String args [])
+    public static void main (String args[])
     {
-        m = new Main();
-        m.start();
+        Main m = new Main();
     }
 }
